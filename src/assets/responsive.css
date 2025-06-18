@@ -1,0 +1,67 @@
+/* ===========================
+   Ajustes para pantallas ≤ 576px
+   =========================== */
+@media (max-width: 576px) {
+  /* 1) Sidebar: Ocultar labels, mostrar solo iconos */
+  .sidebar .nav-link span {
+    display: none !important;
+  }
+  /* Forzar ancho mínimo para íconos centrados */
+  .sidebar {
+    width: var(--sidebar-mini-width) !important;
+  }
+  .main-container {
+    margin-left: var(--sidebar-mini-width) !important;
+  }
+
+  /* 2) Header: Ocultar título largo, mostrar solo logo */
+  .app-header h1 {
+    font-size: 0;
+    width: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  /* 3) Filtros: Apilar botones verticalmente y con scroll horizontal */
+  .crud-productos .card-header > div,
+  .crud-caja    .card-header > div {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .crud-productos .card-header button,
+  .crud-caja    .card-header button {
+    flex: 0 0 auto;
+    margin-right: 0.25rem;
+  }
+
+  /* 4) Tabla: scroll horizontal */
+  .crud-productos .table,
+  .crud-caja    .table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* ===========================
+   Ajustes para pantallas ≤ 768px
+   =========================== */
+@media (max-width: 768px) {
+  /* Sidebar ligeramente más estrecha */
+  .sidebar {
+    width: calc(var(--sidebar-width) * 0.6) !important;
+  }
+  .main-container {
+    margin-left: calc(var(--sidebar-width) * 0.6) !important;
+  }
+
+  /* Reducir padding de la tabla */
+  .crud-productos .table th,
+  .crud-productos .table td,
+  .crud-caja    .table th,
+  .crud-caja    .table td {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+}

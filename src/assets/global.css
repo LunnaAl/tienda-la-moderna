@@ -1,0 +1,172 @@
+/* Paleta principal */
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+:root {
+  --color-bg:         #f6f7fb;
+  --color-sidebar:    #27293d;
+  --color-header:     #5a4fbe;
+  --color-primary:    #5a4fbe;
+  --color-accent:     #3ac5c9;
+  --color-card-bg:    #ffffff;
+  --color-text:       #333333;
+  --color-text-light: #fafafa;
+}
+
+/* Base */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+/* Botones */
+.btn-primary {
+  background-color:transparent;
+  border-color: #ececec !important;
+  color: #ececec !important;
+  font-weight: 650;
+  border-radius: 8px !important;
+  padding: 0.4rem 0.9rem !important;
+}
+.btn-primary:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+
+}
+
+.btn-guardar{
+    background-color: #5a4fbe;
+    color: #ffffff;
+}
+.btn-guardar:hover{
+    background-color: #ffffff;
+    color: #5a4fbe;
+    border-color: #5a4fbe;
+}
+
+.btn-cerrar{
+    background-color: #949494;
+    color: #ffffff;
+}
+.btn-cerrar:hover{
+    background-color: #ffffff;
+    color: #949494;
+    border-color: #949494;
+}
+
+
+/* fade-slide enter/leave */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.3s ease;
+}
+
+/* Punto de partida de la nueva vista */
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateX(10px);
+}
+/* Punto final de la nueva vista */
+.fade-slide-enter-to {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Punto inicial de salida de la vista vieja */
+.fade-slide-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* Punto final de salida de la vista vieja */
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+
+/* Tarjetas */
+.card {
+  background: var(--color-card-bg);
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+
+}
+.card-header {
+  background: var(--color-header);
+  color: var(--color-text-light);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  font-weight: 600;
+  padding: 0.8rem 1.2rem;
+}
+.card-body {
+  padding: 0;
+}
+
+/* Tablas */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.table thead th {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  font-weight: 500;
+}
+.table tbody tr {
+  background: var(--color-card-bg);
+  border-bottom: 1px solid #ececec;
+}
+.table tbody tr:hover {
+  background: #eef3ff;
+}
+.table td, .table th {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+  border: none;
+}
+
+/* Sidebar y header (App.vue) */
+.sidebar {
+  background: var(--color-sidebar);
+  color: var(--color-text-light);
+}
+.nav-link {
+  color: var(--color-text-light) !important;
+  border-radius: 8px;
+}
+.nav-link.active {
+  background: var(--color-primary) !important;
+}
+
+/* Main header */
+.navbar {
+  background: var(--color-sidebar) !important;
+  color: var(--color-text-light);
+}
+
+/* src/assets/global.css */
+:root {
+  --border-radius: 1.5rem;  /* <— valor global para bordes */
+}
+
+
+/* Botones */
+.btn {
+  border-radius: calc(var(--border-radius) / 2) !important;
+}
+
+:root {
+  --sidebar-width:      240px;
+  --sidebar-mini-width: 64px;
+}

@@ -1,0 +1,69 @@
+/* 1) Contenedor estilo tabs */
+.card-header .btn-group {
+  background: #2d2d2d;          /* un gris oscuro uniforme */
+  border-radius: 50px;
+  padding: 4px;                 /* espacio interior para que sobresalgan las pestañas */
+  display: inline-flex;
+}
+
+/* 2) Pestañas (botones) */
+.card-header .btn-group .btn {
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;       /* texto inactivo gris claro */
+  padding: 0.5rem 1rem;
+  margin: 0 2px;                /* separador entre pestañas */
+  border-radius: 50px !important;
+  min-width: 80px;              /* anchura mínima para uniformidad */
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* 3) Pestaña activa */
+.card-header .btn-group .btn.active {
+  background-color: #ffffff !important;  /* azul Bootstrap */
+  color: #000000 !important;
+  text-decoration: none;
+}
+
+/* 4) Hover en pestañas inactivas */
+.card-header .btn-group .btn:not(.active):hover {
+  background-color: rgba(171, 137, 204, 0.267) !important;
+  color: #aca3ff !important;
+}
+
+/* Añade transición a fondo y color de las pestañas */
+.card-header .btn-group .btn {
+  transition: 
+    background-color 0.3s ease, 
+    color            0.3s ease;
+}
+
+/* Para la pestaña activa, también suavizamos la transición */
+.card-header .btn-group .btn.active {
+  transition: 
+    background-color 0.3s ease, 
+    color            0.3s ease,
+    border-color     0.3s ease;
+}
+
+.card-header .btn-group .btn {
+  position: relative;
+}
+.card-header .btn-group .btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: transparent;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.card-header .btn-group .btn.active::after {
+  background: #000000;
+  transform: scaleX(1);
+}
+.card-header .btn-group .btn:not(.active)::after {
+  transform: scaleX(0);
+}
