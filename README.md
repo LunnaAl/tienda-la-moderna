@@ -1,4 +1,4 @@
-# crud-app
+# TiendaLaModerna
 
 ## Project setup
 ```
